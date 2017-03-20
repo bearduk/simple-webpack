@@ -12,6 +12,10 @@ const config = {
             { // first rule is an object
                 use: 'babel-loader',
                 test: /\.js$/ // regex - ends with .js
+            },
+            { // new rule
+                use: ['style-loader', 'css-loader'], // applied right to left
+                test: /\.css$/
             }
         ]
     }
