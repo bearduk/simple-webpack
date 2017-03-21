@@ -6,7 +6,8 @@ const config = {
     entry: './src/index.js', // relative
     output: {
         path: path.resolve(__dirname, 'build'), // requires absolute path. resolve makes sure it works on all operating systems. dirname means from the folder name this file is in
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: 'build/' // this is used by loaders if they need it. e.g. url-loader uses it when outputting images, it prepends the image name with this path
     },
     // end bare minimum setup
     module: { // webpack 2 uses modules, and rule. loader was old webpack 1
