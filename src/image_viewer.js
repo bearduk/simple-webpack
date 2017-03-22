@@ -13,7 +13,7 @@ document.body.appendChild(image);
 const bigImage = document.createElement('img');
 bigImage.src = big; // this needs the publicPath setting in webpack.config.js in order to work.
 
-console.log(bigImage);
+
 document.body.appendChild(bigImage);
 
 
@@ -23,6 +23,10 @@ const cbtestUrlLoader = require("url-loader?limit=10!../assets/1200.jpg");
 twelveImage.src = cbtestUrlLoader;
 // => DataUrl if "file.png" is smaller than xkb
 
-document.body.appendChild(twelveImage);
-console.log('cbtestUrlLoader: ' + cbtestUrlLoader);
+const path = require('path');
+
+console.log('bigImage: ' + bigImage);
+console.log(bigImage);
+console.log('twelveImage: ' + twelveImage);
 console.log(twelveImage);
+document.body.appendChild(twelveImage);

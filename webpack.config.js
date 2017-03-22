@@ -2,6 +2,7 @@ const path = require('path'); // path is part of node itself
 const ExtractTextPlugin =   require('extract-text-webpack-plugin');
 
 
+
 const config = {
     entry: './src/index.js', // relative
     output: {
