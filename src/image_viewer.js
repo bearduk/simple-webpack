@@ -14,3 +14,10 @@ const bigImage = document.createElement('img');
 bigImage.src = big; // this needs the publicPath setting in webpack.config.js in order to work.
 
 document.body.appendChild(bigImage);
+
+
+// testing inline url-loader setting as per: https://github.com/webpack-contrib/url-loader
+const cbtestUrlLoader = require("url-loader?limit=100!../assets/1200.jpg");
+// => DataUrl if "file.png" is smaller than 10kb
+
+document.body.appendChild(cbtestUrlLoader);
