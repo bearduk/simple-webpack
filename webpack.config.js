@@ -30,7 +30,7 @@ const config = {
                     // 'url-loader',    note that if you want options, and there are multiple loaders in the array, then you need to change this to an object as so...
                     {
                         loader: 'url-loader', // don't ask why, but this needs 'loader' rather than 'use'.
-                        options: { limit: 40000 }
+                        options: { limit: 15000 } // limit to 15kB
                     },
                     'image-webpack-loader' // far right goes first, so image-webpack-loader followed by url-loader
                 ]
