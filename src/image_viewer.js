@@ -1,3 +1,24 @@
+import small from '../assets/small.jpg';
+import '../styles/image_viewer.css'; // this is ES2015 import. It is just importing. No need to assign it to anything.
+import twelveSq from '../assets/big.jpg';
+
+
+export default () => {
+
+	const image = document.createElement('img');
+	image.src = small; // this works as it's in the bundle
+	document.body.appendChild(image);
+
+	console.log('test');
+
+	const twelveImage = document.createElement('img');
+	twelveImage.src = twelveSq;
+	document.body.appendChild(twelveImage);
+};
+
+
+/* // orig multiple
+
 // note that you may well need to 'brew install libpng' in order to run the image imports in webpack
 import big from '../assets/big.jpg';
 import small from '../assets/small.jpg';
@@ -27,3 +48,9 @@ console.log(bigImage);
 console.log('twelveImage: ' + twelveImage);
 console.log(twelveImage);
 document.body.appendChild(twelveImage);
+
+
+
+
+
+*/ // . orig multiple

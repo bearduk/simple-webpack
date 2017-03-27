@@ -1,10 +1,12 @@
-// CommonJS
-// const sum = require('./sum');
+const button = document.createElement('button');
+button.innerText = 'Click me File Splitter - call JS';
+button.onclick = () => {
+	System.import('./image_viewer').then(module => {
+		console.log(module);
+		module.default(); // call the default export from image viewer
+	});
+	// System is a global variable inside of JS
+	// System.import is special ES2015 import to reach out to the server again
+};
 
-// ES2015 using import. Babel takes care of this new type of import/export
-import sum from './sum'; // standard to import code
-import './image_viewer'; // note that image_viewer just runs, so you don't need to import with xyz from whatever
-
-
-const total = sum(4,3);
-console.log(total);
+document.body.appendChild(button);
