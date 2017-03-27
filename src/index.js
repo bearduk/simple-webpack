@@ -1,3 +1,5 @@
+import '../styles/image_viewer.css'; // this is ES2015 import. It is just importing. No need to assign it to anything.
+
 const button = document.createElement('button');
 button.innerText = 'Click me File Splitter - call JS';
 button.onclick = () => {

@@ -1,5 +1,4 @@
 import small from '../assets/small.jpg';
-import '../styles/image_viewer.css'; // this is ES2015 import. It is just importing. No need to assign it to anything.
 import twelveSq from '../assets/big.jpg';
 
 
