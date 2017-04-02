@@ -1,3 +1,4 @@
 # simple-webpack
 
-node_modules/.bin/eslint --init
+eslint --init (globally)
+or node_modules/.bin/eslint --init (locally)
